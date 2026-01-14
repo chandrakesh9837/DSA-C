@@ -1,2 +1,50 @@
 # DSA-C
 Stack all Operation
+#include <stdio.h>
+
+int main()
+{
+    int stck[5];
+    int top=-1;
+    int n , pop, push;
+    
+    printf("enter value for make Stack:\n");
+    
+    while(1)
+    {   printf("Push Element: ");
+        scanf("%d",&n);
+        if(top<4)
+        {
+            top++;
+            stck[top]=n;
+        }
+        else
+        {
+            //top--;
+            
+            printf("\nstack is Overflow");
+            break;
+        }
+    }
+    printf("Display Stack : \n");
+    for(int i=4; i>=0; i--)
+    {
+        printf("\n%d",stck[i]);
+    
+    }
+    while(1)
+    {
+        if(top!=-1)
+        {
+            printf("\npop element: %d",stck[top]);
+            top--;
+        }
+        else
+        {
+            printf("\n\nStack is Underflow:");  
+            break;
+        }
+    }
+
+    return 0;
+}
